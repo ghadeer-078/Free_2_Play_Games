@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.ghadeers.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_DBFragment"
+            app:destination="@id/DBFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_APIFragment"
+            app:destination="@id/APIFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/DBFragment"
+        android:name="com.example.ghadeers.DBFragment"
+        android:label="fragment_d_b"
+        tools:layout="@layout/fragment_d_b" >
+        <action
+            android:id="@+id/action_DBFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/APIFragment"
+        android:name="com.example.ghadeers.APIFragment"
+        android:label="fragment_a_p_i"
+        tools:layout="@layout/fragment_a_p_i" >
+        <action
+            android:id="@+id/action_APIFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
